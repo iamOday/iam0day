@@ -1,0 +1,7 @@
+Sitemap: https://www.iam0.day/sitemap.xml
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Allow: /
