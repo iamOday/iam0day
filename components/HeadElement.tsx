@@ -56,7 +56,11 @@ export function HeadElement(props: HeadProps) {
       {/* Base Information */}
       <meta key="charset" charSet="UTF-8" />
       <title key="title">{name} {text && "- " + text}</title>
-      <meta key="description" name="description" content={url!.hostname + ': ' +text} />
+      <meta
+        key="description"
+        name="description"
+        content={url!.hostname + ": " + text}
+      />
       <meta
         key="viewport"
         name="viewport"

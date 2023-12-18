@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+
 # iam0day
+
 =======
+
 # Fresh project
 
 Your new Fresh project is ready to go. You can follow the Fresh "Getting
@@ -16,5 +19,5 @@ Then start the project:
 deno task start
 ```
 
-This will watch the project directory and restart as necessary.
->>>>>>> 41a9684 (new)
+This will watch the project directory and restart as necessary. >>>>>>> 41a9684
+(new)
