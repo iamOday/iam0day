@@ -94,9 +94,9 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="twitter:domain"
         property="twitter:domain"
-        content={url?.hostname}
+        content={url!.hostname}
       />
-      <meta key="twitter:url" property="twitter:url" content={url?.href} />
+      <meta key="twitter:url" property="twitter:url" content={url!.href} />
       <meta key="twitter:title" name="twitter:title" content={name} />
       <meta key="twitter:site" name="twitter:site" content={"@" + name} />
       <meta key="twitter:site:id" property="twitter:site:id" content="0" />
@@ -123,20 +123,20 @@ export function HeadElement(props: HeadProps) {
       <Style key="styles" href={css} as="style" />
       {/* Link Element */}
       <link
-        key={"canonical_" + url?.origin}
+        key={"canonical_" + url!.href}
         rel="canonical"
-        href={url?.origin}
+        href={url!.href}
       />
       <link
-        key={"preconnect_" + url?.origin}
+        key={"preconnect_" + url!.origin}
         rel="preconnect"
-        href={url?.origin}
+        href={url!.origin}
         crossOrigin
       />
       <link
-        key={"dnsprefetch_" + url?.origin}
+        key={"dnsprefetch_" + url!.origin}
         rel="dns-prefetch"
-        href={url?.origin}
+        href={url!.origin}
       />
       {/* Other Meta */}
       <meta
