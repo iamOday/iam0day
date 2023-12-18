@@ -1,0 +1,14 @@
+{
+  "build_id": "ac0b8c09cd24cf35d58cbe3a096872d9486ffe72",
+  "files": {
+    "main.js": [
+      "chunk-REY47OEU.js"
+    ],
+    "deserializer.js": [],
+    "signals.js": [
+      "chunk-REY47OEU.js"
+    ],
+    "chunk-REY47OEU.js": [],
+    "metafile.json": []
+  }
+}
