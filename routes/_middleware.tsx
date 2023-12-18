@@ -19,10 +19,12 @@ export async function handler(_req: Request, ctx: MiddlewareHandlerContext) {
     "Strict-Transport-Security",
     "max-age=63072000; includeSubDomains; preload",
   );
-  {/*headers.set(
+  {
+    /*headers.set(
     "Content-Security-Policy",
     `require-trusted-types-for 'script';default-src 'none'; script-src 'self' 'unsafe-inline' https://analytics.eu.umami.is; style-src 'self' 'strict-dynamic' https://analytics.eu.umami.is; style-src-elem 'self' 'unsafe-inline' https://analytics.eu.umami.is; style-src-attr 'self' 'unsafe-inline' https://analytics.eu.umami.is; img-src 'self'; font-src 'none'; connect-src 'self' https://analytics.eu.umami.is; media-src 'self'; object-src 'none'; child-src 'none'; frame-src 'none'; worker-src 'none'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'; manifest-src 'none'`,
-  );*/}
+  );*/
+  }
   headers.set("Access-Control-Allow-Origin", ctx.url!.origin);
   headers.set("Access-Control-Allow-Credentials", "true");
   headers.set("X-XSS-Protection", "0");

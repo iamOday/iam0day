@@ -18,7 +18,10 @@ export default function Home(props: PageProps) {
   return (
     <>
       <HeadElement url={url} title="HomePage" />
-      <div className="grid grid-column place-items-center h-screen" data-nosnippet>
+      <div
+        className="grid grid-column place-items-center h-screen"
+        data-nosnippet
+      >
         <div className="text-center">
           <h1 className="font-bold tracking-tight text-white-900 text-4xl md:text-5xl">
             Coming soon...
@@ -83,7 +86,10 @@ export default function Home(props: PageProps) {
           </div>
         </div>
       </div>
-      <footer className="sticky grid place-items-center text-center py-5" data-nosnippet>
+      <footer
+        className="sticky grid place-items-center text-center py-5"
+        data-nosnippet
+      >
         <ExternalLink href="https://fresh.deno.dev" class="py-3">
           <img
             width="197"
