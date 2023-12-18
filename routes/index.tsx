@@ -96,7 +96,8 @@ export default function Home(props: PageProps) {
             height="37"
             src={asset("/fresh-badge.svg")}
             title="Fresh"
-            alt="fresh"
+            alt="Deno Fresh"
+            loading="lazy"
           />
         </ExternalLink>
         <p class="py-3 text-xs md:text-base mx-3">
