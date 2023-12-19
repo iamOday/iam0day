@@ -29,6 +29,8 @@ export function Style(
 ) {
   return (
     <>
+      <link rel="preconnect" href={props.href} crossOrigin />
+      <link rel="dns-prefetch" href={props.href} />
       <link
         rel="preload"
         as={props.as}
