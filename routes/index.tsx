@@ -116,6 +116,7 @@ export default function Home(props: PageProps) {
             privacy friendly
           </ExternalLink>!
         </p>
+        <a href="/csp" class="hidden"></a>
       </footer>
     </>
   );
