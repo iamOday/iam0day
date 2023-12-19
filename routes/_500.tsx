@@ -1,5 +1,5 @@
 import { HeadElement } from "@/components/HeadElement.tsx";
-import { InternalButton } from "../components/Links.tsx";
+import { InternalButton } from "@/components/Links.tsx";
 import { ErrorPageProps } from "$fresh/server.ts";
 /**
  * Description

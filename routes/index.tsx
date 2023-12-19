@@ -17,7 +17,7 @@ export default function Home(props: PageProps) {
   const { url } = props;
   return (
     <>
-      <HeadElement url={url} title="HomePage" />
+      <HeadElement url={url} />
       <div
         className="grid grid-column place-items-center h-screen"
         data-nosnippet

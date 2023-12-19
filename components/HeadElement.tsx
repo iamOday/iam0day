@@ -59,7 +59,7 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="description"
         name="description"
-        content={url!.hostname + ": " + text}
+        content={SITE.title + ": " + text}
       />
       <meta
         key="viewport"
@@ -78,7 +78,11 @@ export function HeadElement(props: HeadProps) {
       />
       {/* Google / Search Engine Tags */}
       <meta key="itempropname" itemProp="name" content={name} />
-      <meta key="itempropdescription" itemProp="description" content={text} />
+      <meta
+        key="itempropdescription"
+        itemProp="description"
+        content={SITE.title + ": " + text}
+      />
       <meta key="itempropimage" itemProp="image" content={image} />
       {/* Open Meta Tags */}
       <meta key="og:type" property="og:type" content="website" />
@@ -86,7 +90,11 @@ export function HeadElement(props: HeadProps) {
       <meta key="og:locale" property="og:locale" content="en" />
       <meta key="og:type" property="og:type" content="website" />
       <meta key="og:title" property="og:title" content={name} />
-      <meta key="og:description" property="og:description" content={text} />
+      <meta
+        key="og:description"
+        property="og:description"
+        content={SITE.title + ": " + text}
+      />
       <meta key="og:url" property="og:url" content={url!.href} />
       <meta key="og:image" property="og:image" content={image} />
       {/* Twitter Meta Tags */}
@@ -98,16 +106,16 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="twitter:domain"
         property="twitter:domain"
-        content={url!.hostname}
+        content={SITE.title}
       />
       <meta key="twitter:url" property="twitter:url" content={url!.href} />
       <meta key="twitter:title" name="twitter:title" content={name} />
-      <meta key="twitter:site" name="twitter:site" content={"@" + name} />
+      <meta key="twitter:site" name="twitter:site" content={"@" + SITE.title} />
       <meta key="twitter:site:id" property="twitter:site:id" content="0" />
       <meta
         key="twitter:description"
         name="twitter:description"
-        content={text}
+        content={SITE.title + ": " + text}
       />
       <meta key="twitter:image" name="twitter:image" content={image} />
       <meta
