@@ -59,7 +59,7 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="description"
         name="description"
-        content={SITE.title + ": " + text}
+        content={SITE.title + ": " + text + " | " + SITE.keywords}
       />
       <meta
         key="viewport"
@@ -81,7 +81,7 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="itempropdescription"
         itemProp="description"
-        content={SITE.title + ": " + text}
+        content={SITE.title + ": " + text + " | " + SITE.keywords}
       />
       <meta key="itempropimage" itemProp="image" content={image} />
       {/* Open Meta Tags */}
@@ -93,7 +93,7 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="og:description"
         property="og:description"
-        content={SITE.title + ": " + text}
+        content={SITE.title + ": " + text + " | " + SITE.keywords}
       />
       <meta key="og:url" property="og:url" content={url!.href} />
       <meta key="og:image" property="og:image" content={image} />
