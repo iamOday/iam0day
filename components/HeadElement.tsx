@@ -74,7 +74,7 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="keywords"
         name="keywords"
-        content="0day, iam0day, security, cybersecurity"
+        content={SITE.keywords}
       />
       {/* Google / Search Engine Tags */}
       <meta key="itempropname" itemProp="name" content={name} />

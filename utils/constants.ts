@@ -1,6 +1,7 @@
 export const SITE = {
   title: "iam0day",
   description: "A new era for the industry!",
+  keywords: "0day, iam0day, security, cybersecurity",
 };
 export const $umami = {
   origin: "https://analytics.eu.umami.is",
