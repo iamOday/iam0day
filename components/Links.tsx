@@ -29,18 +29,27 @@ export function Style(
 ) {
   return (
     <>
-      <link rel="preconnect" href={props.href} crossOrigin />
-      <link rel="dns-prefetch" href={props.href} />
       <link
-        rel="preload"
-        as={props.as}
+        key={"preconnect" + props.href}
+        rel="preconnect"
         href={props.href}
-        crossorigin={props.crossorigin}
+        crossOrigin="anonymous"
+      />
+      <link
+        key={"dnsprefetch_" + props.href}
+        rel="dns-prefetch"
+        href={props.href}
+      />
+      <link
+        rel={props.rel || "preload"}
+        as="style"
+        href={props.href}
+        crossOrigin="anonymous"
       />
       <link
         rel="stylesheet"
         href={props.href}
-        crossorigin={props.crossorigin}
+        crossOrigin="anonymous"
         {...props}
       />
     </>
@@ -52,19 +61,28 @@ export function Script(
 ) {
   return (
     <>
-      <link rel="preconnect" href={props.href} crossOrigin />
-      <link rel="dns-prefetch" href={props.href} />
       <link
-        rel="preload"
+        key={"preconnect" + props.href}
+        rel="preconnect"
+        href={props.href}
+        crossOrigin="anonymous"
+      />
+      <link
+        key={"dnsprefetch_" + props.href}
+        rel="dns-prefetch"
+        href={props.href}
+      />
+      <link
+        rel={props.rel || "preload"}
         as="script"
         href={props.src}
         integrity={props.integrity}
-        crossOrigin={props.crossOrigin}
+        crossOrigin="anonymous"
       />
       <script
         src={props.src}
         integrity={props.integrity}
-        crossOrigin={props.crossOrigin}
+        crossOrigin="anonymous"
         {...props}
       />
     </>

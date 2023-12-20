@@ -15,6 +15,10 @@ import { MiddlewareHandlerContext } from "$fresh/server.ts";
 export async function handler(_req: Request, ctx: MiddlewareHandlerContext) {
   const resp = await ctx.next();
   const headers = resp.headers;
+  const ct = headers.get("content-type");
+  const okct = !ct?.includes("image/vnd.microsoft.icon") &&
+      ct?.replace("; charset=utf-8", "") + "; charset=utf-8" || ct;
+  headers.set("Content-Type", okct);
   headers.set(
     "Strict-Transport-Security",
     "max-age=63072000; includeSubDomains; preload",
@@ -27,13 +31,14 @@ export async function handler(_req: Request, ctx: MiddlewareHandlerContext) {
   }
   headers.set("Access-Control-Allow-Origin", ctx.url!.origin);
   headers.set("Access-Control-Allow-Credentials", "true");
-  headers.set("X-XSS-Protection", "0");
-  headers.set("X-Frame-Options", "DENY");
+  headers.set("X-Frame-Options", "SAMEORIGIN");
+  headers.set("X-XSS-Protection", "1; mode=block");
   headers.set("X-Content-Type-Options", "nosniff");
+  headers.set("Clear-Site-Data", '"*"');
   headers.set("X-Permitted-Cross-Domain-Policies", "none");
   headers.set("Referrer-Policy", "no-referrer");
   headers.set("X-DNS-Prefetch-Control", "off");
-  headers.set("Cache-Control", "no-store");
+  headers.set("Cache-Control", "public, max-age=3600, must-revalidate");
   headers.set("Cross-Origin-Opener-Policy", "same-origin");
   headers.set("Cross-Origin-Embedder-Policy", "require-corp");
   headers.set("Cross-Origin-Resource-Policy", "same-site");

@@ -132,7 +132,7 @@ export function HeadElement(props: HeadProps) {
         }}
       />
       {/* Styles */}
-      <Style key="styles" href={css} as="style" />
+      <Style key="styles" href={css} />
       {/* Link Element */}
       <link
         key={"canonical_" + url!.href}
@@ -143,7 +143,7 @@ export function HeadElement(props: HeadProps) {
         key={"preconnect_" + url!.origin}
         rel="preconnect"
         href={url!.origin}
-        crossOrigin
+        crossOrigin="anonymous"
       />
       <link
         key={"dnsprefetch_" + url!.origin}
@@ -151,50 +151,71 @@ export function HeadElement(props: HeadProps) {
         href={url!.origin}
       />
       {/* Other Meta */}
-      <meta
-        name="ahrefs-site-verification"
-        content="756b79c126714f94348746ad8d87f1c39972a2194ae19d7539eba0b226e8ff18"
-      />
-      <meta
-        name="ahrefs-site-verification"
-        content="82420be851982da7f9ec7de92a67ad1d46adebf29cefa4754403d71a7d8779d4"
-      />
       {
         /*<meta
             httpEquiv="Content-Security-Policy"
             content="require-trusted-types-for 'script';default-src 'none';script-src 'strict-dynamic' 'nonce-rAnd0m123' https: 'unsafe-inline';script-src-elem 'self' https://analytics.eu.umami.is 'unsafe-inline';script-src-attr 'self' https://analytics.eu.umami.is 'unsafe-inline';style-src 'self';style-src-elem 'self' https://analytics.eu.umami.is 'unsafe-inline';style-src-attr 'self' 'unsafe-inline';img-src 'self';font-src 'self';connect-src 'self' https://analytics.eu.umami.is;media-src 'self';object-src 'none';child-src 'self';frame-src 'none';worker-src 'self';form-action 'none';block-all-mixed-content;upgrade-insecure-requests;base-uri 'none';"
             />*/
       }
-      <meta name="referrer" content="no-referrer" />
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Permitted-Cross-Domain-Policies" content="none" />
+      <meta key="referrer" name="referrer" content="no-referrer" />
       <meta
+        key="X-Content-Type-Options"
+        httpEquiv="X-Content-Type-Options"
+        content="nosniff"
+      />
+      <meta
+        key="X-Permitted-Cross-Domain-Policies"
+        httpEquiv="X-Permitted-Cross-Domain-Policies"
+        content="none"
+      />
+      <meta
+        key="Referrer-Policy"
         httpEquiv="Referrer-Policy"
         content="no-referrer"
       />
-      <meta http-equiv="x-dns-prefetch-control" content="off" />
       <meta
+        key="x-dns-prefetch-control"
+        http-equiv="x-dns-prefetch-control"
+        content="off"
+      />
+      <meta
+        key="Strict-Transport-Security"
         httpEquiv="Strict-Transport-Security"
         content="max-age=63072000; includeSubDomains; preload"
       />
-      <meta httpEquiv="Cache-Control" content="no-store" />
-      <meta httpEquiv="Clear-Site-Data" content="*" />
       <meta
+        key="Cache-Control"
+        httpEquiv="Cache-Control"
+        content="public, max-age=3600, must-revalidate"
+      />
+      <meta
+        key="Permissions-Policy"
         httpEquiv="Permissions-Policy"
         content="accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(), gamepad=(), speaker-selection=(), conversion-measurement=(), focus-without-user-activation=(), hid=(), idle-detection=(), interest-cohort=(), serial=(), sync-script=(), trust-token-redemption=(), window-management=(), vertical-scroll=()"
       />
-      <meta httpEquiv="Cross-Origin-Opener-Policy" content="same-origin" />
       <meta
+        key="Cross-Origin-Opener-Policy"
+        httpEquiv="Cross-Origin-Opener-Policy"
+        content="same-origin"
+      />
+      <meta
+        key="Cross-Origin-Embedder-Policy"
         httpEquiv="Cross-Origin-Embedder-Policy"
         content="require-corp"
       />
-      <meta httpEquiv="Cross-Origin-Resource-Policy" content="same-site" />
       <meta
+        key="Cross-Origin-Resource-Policy"
+        httpEquiv="Cross-Origin-Resource-Policy"
+        content="same-site"
+      />
+      <meta
+        key="theme-color-light"
         name="theme-color"
         media="(prefers-color-scheme: light)"
         content="grey"
       />
       <meta
+        key="theme-color-dark"
         name="theme-color"
         media="(prefers-color-scheme: dark)"
         content="black"

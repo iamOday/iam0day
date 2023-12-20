@@ -1,18 +1,18 @@
 import { RouteConfig, RouteContext } from "$fresh/server.ts";
-import { useCSP } from "$fresh/runtime.ts";
+//import { useCSP } from "$fresh/runtime.ts";
 import { asset } from "$fresh/runtime.ts";
 import { HeadElement } from "@/components/HeadElement.tsx";
 import { type PageProps } from "$fresh/server.ts";
 
-export default function CSP(props: PageProps) {
+export default function Page(props: PageProps) {
   const { url } = props;
   const script = url!.origin + asset("/ok.js");
-  useCSP((csp) => {
+  /*useCSP((csp) => {
     if (!csp.directives.scriptSrc) {
       csp.directives.scriptSrc = [];
     }
     csp.directives.scriptSrc.push(script);
-  });
+  });*/
   return (
     <>
       <HeadElement title="CSP" url={url} />
@@ -22,6 +22,6 @@ export default function CSP(props: PageProps) {
   );
 }
 
-export const config: RouteConfig = {
+/*export const config: RouteConfig = {
   csp: true,
-};
+};*/

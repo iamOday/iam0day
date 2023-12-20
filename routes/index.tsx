@@ -1,8 +1,5 @@
-import { ExternalLink } from "@/components/Links.tsx";
-import { HeadElement } from "@/components/HeadElement.tsx";
-import { asset } from "$fresh/runtime.ts";
 import { type PageProps } from "$fresh/server.ts";
-
+import { ExternalLink } from "@/components/Links.tsx";
 /**
  * The `export default function Home(props: PageProps) {` statement is exporting a default function named `Home`. This function takes in a parameter `props` of type `PageProps`. The function is used to render the home page of the website.
  *
@@ -14,10 +11,9 @@ import { type PageProps } from "$fresh/server.ts";
  * @exports
  */
 export default function Home(props: PageProps) {
-  const { url } = props;
+  //const { url } = props;
   return (
     <>
-      <HeadElement url={url} />
       <div
         className="grid grid-column place-items-center h-screen"
         data-nosnippet
@@ -86,38 +82,6 @@ export default function Home(props: PageProps) {
           </div>
         </div>
       </div>
-      <footer
-        className="sticky grid place-items-center text-center py-5"
-        data-nosnippet
-      >
-        <ExternalLink href="https://fresh.deno.dev" class="py-3">
-          <img
-            width="197"
-            height="37"
-            src={asset("/fresh-badge.svg")}
-            title="Fresh"
-            alt="Deno Fresh"
-            loading="lazy"
-          />
-        </ExternalLink>
-        <p class="py-3 text-xs md:text-base mx-3">
-          This site uses{" "}
-          <ExternalLink
-            href="https://analytics.eu.umami.is/share/GvIJ3m2AYWS1wBys/iam0day"
-            class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500"
-          >
-            Umami Cloud
-          </ExternalLink>{" "}
-          for visit analysis, it is{" "}
-          <ExternalLink
-            href="https://umami.is/privacy"
-            class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-purple-500"
-          >
-            privacy friendly
-          </ExternalLink>!
-        </p>
-        <a href="/csp" class="hidden"></a>
-      </footer>
     </>
   );
 }
