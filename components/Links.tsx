@@ -30,13 +30,13 @@ export function Style(
   return (
     <>
       <link
-        key={"preconnect" + props.href}
+        key={"preconnect" + props.src}
         rel="preconnect"
         href={props.src}
         crossOrigin="anonymous"
       />
       <link
-        key={"dnsprefetch_" + props.href}
+        key={"dnsprefetch_" + props.src}
         rel="dns-prefetch"
         href={props.src}
       />
