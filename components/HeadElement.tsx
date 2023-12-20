@@ -132,7 +132,7 @@ export function HeadElement(props: HeadProps) {
         }}
       />
       {/* Styles */}
-      <Style key="styles" href={css} />
+      <Style key="styles" src={url!.origin} href={css} />
       {/* Link Element */}
       <link
         key={"canonical_" + url!.href}
