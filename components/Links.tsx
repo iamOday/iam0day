@@ -32,13 +32,13 @@ export function Style(
       <link
         key={"preconnect" + props.href}
         rel="preconnect"
-        href={props.href}
+        href={props.src}
         crossOrigin="anonymous"
       />
       <link
         key={"dnsprefetch_" + props.href}
         rel="dns-prefetch"
-        href={props.href}
+        href={props.src}
       />
       <link
         rel={props.rel || "preload"}
