@@ -139,17 +139,6 @@ export function HeadElement(props: HeadProps) {
         rel="canonical"
         href={url!.href}
       />
-      <link
-        key={"preconnect_" + url!.origin}
-        rel="preconnect"
-        href={url!.origin}
-        crossOrigin="anonymous"
-      />
-      <link
-        key={"dnsprefetch_" + url!.origin}
-        rel="dns-prefetch"
-        href={url!.origin}
-      />
       {/* Other Meta */}
       {
         /*<meta
