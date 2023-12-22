@@ -3,7 +3,6 @@ import { InternalButton } from "@/components/Links.tsx";
 import { ErrorPageProps } from "$fresh/server.ts";
 /**
  * Description
- *
  * @function
  * @name Error500Page
  * @kind function

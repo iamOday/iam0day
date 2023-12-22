@@ -1,8 +1,6 @@
 import { MiddlewareHandlerContext } from "$fresh/server.ts";
-
 /**
  * The `export async function handler(_req: Request, ctx: MiddlewareHandlerContext)` is a function that serves as a middleware handler. It takes two parameters: `_req` which represents the incoming request, and `ctx` which represents the middleware handler context.
- *
  * @async
  * @function
  * @name handler
