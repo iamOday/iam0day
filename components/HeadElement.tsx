@@ -186,7 +186,7 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="Cache-Control"
         httpEquiv="Cache-Control"
-        content="public, max-age=3600, must-revalidate"
+        content="no-store"
       />
       <meta
         key="Permissions-Policy"
