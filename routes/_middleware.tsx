@@ -38,7 +38,7 @@ export async function handler(_req: Request, ctx: MiddlewareHandlerContext) {
   headers.set("X-Permitted-Cross-Domain-Policies", "none");
   headers.set("Referrer-Policy", "no-referrer");
   headers.set("X-DNS-Prefetch-Control", "off");
-  headers.set("Cache-Control", "public, max-age=3600, must-revalidate");
+  headers.set("Cache-Control", "no-store");
   headers.set("Cross-Origin-Opener-Policy", "same-origin");
   headers.set("Cross-Origin-Embedder-Policy", "require-corp");
   headers.set("Cross-Origin-Resource-Policy", "same-site");
