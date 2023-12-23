@@ -15,21 +15,21 @@ export default function NotFoundPage({ url }: UnknownPageProps) {
   return (
     <>
       <HeadElement url={url} description="Page Not Found" />
-      <div class="isolate grid place-items-center h-screen">
-        <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl">
+      <section className="isolate grid place-items-center h-screen">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl">
             Page not found: {url.pathname}
           </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-600">
             The page you were looking for doesn't exist.
           </p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <InternalButton href="/" class="underline">
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <InternalButton href="/" className="underline">
               Go back home
             </InternalButton>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -14,7 +14,7 @@ export default function Error500Page({ error, url }: ErrorPageProps) {
   return (
     <>
       <HeadElement url={url} description="Internal Server Error" />
-      <div class="isolate grid place-items-center h-screen">
+      <section class="isolate grid place-items-center h-screen">
         <div class="text-center">
           <h1 class="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl">
             Internal Server Error: {(error as Error).message}
@@ -28,7 +28,7 @@ export default function Error500Page({ error, url }: ErrorPageProps) {
             </InternalButton>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

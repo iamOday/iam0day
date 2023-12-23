@@ -1,4 +1,5 @@
 import { HeadElement } from "@/components/HeadElement.tsx";
+import { InternalButton } from "@/components/Links.tsx";
 import { type PageProps } from "$fresh/server.ts";
 import { asset } from "$fresh/runtime.ts";
 export function RickRolledYoutube(props: PageProps) {
@@ -30,8 +31,8 @@ export function RickRolledYoutube(props: PageProps) {
           crossOrigin="anonymous"
         />
       </HeadElement>
-      <div
-        class="sticky grid grid-cols-1 gap-1 place-items-center content-center grid-flow-row auto-rows-max grid- h-screen"
+      <section
+        className="sticky grid grid-cols-1 gap-1 place-items-center content-center grid-flow-row auto-rows-max grid- h-screen"
         data-nosnippet="true"
       >
         <img
@@ -45,10 +46,15 @@ export function RickRolledYoutube(props: PageProps) {
           className="fixed max-h-full min-h-screen min-w-fit max-w-fit bg-cover bg-no-repeat bg-center"
           crossOrigin="anonymous"
         />
-        <span class="fixed grid grid-column place-items-center h-screen font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-          Rick Roll... Rickrolling!
-        </span>
-      </div>
+        <div className="fixed grid grid-flow-row auto-rows-max place-items-center content-center h-screen">
+          <span className="row-1 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+            Rick Roll... Rickrolling!
+          </span>
+          <InternalButton href="/" className="row-1 mt-5 underline">
+            Go back home
+          </InternalButton>
+        </div>
+      </section>
     </>
   );
 }

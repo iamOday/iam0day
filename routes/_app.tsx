@@ -8,7 +8,7 @@ export default defineApp((_, ctx) => {
   const { url } = ctx;
   const deno = url!.origin + asset("/fresh-badge.svg");
   return (
-    <html lang="en" class="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <HeadElement url={ctx.url} title="iam0day">
         <Script
           async="true"
@@ -44,7 +44,7 @@ export default defineApp((_, ctx) => {
           className="sticky grid place-items-center text-center py-5"
           data-nosnippet="true"
         >
-          <ExternalLink href="https://fresh.deno.dev" class="py-3">
+          <ExternalLink href="https://fresh.deno.dev" className="py-3">
             <img
               loading="lazy"
               fetchPriority="low"
@@ -56,23 +56,23 @@ export default defineApp((_, ctx) => {
               crossOrigin="anonymous"
             />
           </ExternalLink>
-          <p class="py-3 text-xs md:text-base mx-3">
+          <p className="py-3 text-xs md:text-base mx-3">
             This site uses{" "}
             <ExternalLink
               href="https://analytics.eu.umami.is/share/GvIJ3m2AYWS1wBys/iam0day"
-              class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500"
+              className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500"
             >
               Umami Cloud
             </ExternalLink>{" "}
             for visit analysis, it is{" "}
             <ExternalLink
               href="https://umami.is/privacy"
-              class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-purple-500"
+              className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-purple-500"
             >
               privacy friendly
             </ExternalLink>!
           </p>
-          <a href="/csp" class="hidden">csp</a>
+          <a href="/csp" className="hidden">csp</a>
         </footer>
       </body>
     </html>

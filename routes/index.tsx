@@ -14,7 +14,7 @@ export default function Home(props: PageProps) {
   //const { url } = props;
   return (
     <>
-      <div
+      <section
         className="grid grid-cols-1 gap-1 place-items-center  content-center grid-flow-row auto-rows-max grid- h-screen"
         data-nosnippet="true"
       >
@@ -24,7 +24,7 @@ export default function Home(props: PageProps) {
           </h1>
           <Social />
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -11,8 +11,8 @@ import { LayoutProps } from "$fresh/server.ts";
  */
 export default function Layout({ Component, state }: LayoutProps) {
   return (
-    <div className="container m-auto">
+    <main className="container m-auto">
       <Component />
-    </div>
+    </main>
   );
 }
