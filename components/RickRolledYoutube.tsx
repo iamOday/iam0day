@@ -42,7 +42,7 @@ export function RickRolledYoutube(props: PageProps) {
           src={rickroll}
           title="Rick Roll"
           alt="Rickrolling: Never Gonna Give You Up"
-          className="fixed h-screen"
+          className="fixed"
           crossOrigin="anonymous"
         />
         <span class="fixed grid grid-column place-items-center h-screen font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
