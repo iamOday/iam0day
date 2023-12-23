@@ -32,7 +32,7 @@ export async function handler(_req: Request, ctx: MiddlewareHandlerContext) {
   headers.set("X-Frame-Options", "SAMEORIGIN");
   headers.set("X-XSS-Protection", "1; mode=block");
   headers.set("X-Content-Type-Options", "nosniff");
-  headers.set("Clear-Site-Data", '"*"');
+  headers.set("Clear-Site-Data", '"cache", "cookies", "storage", "executionContexts"');
   headers.set("X-Permitted-Cross-Domain-Policies", "none");
   headers.set("Referrer-Policy", "no-referrer");
   headers.set("X-DNS-Prefetch-Control", "off");
