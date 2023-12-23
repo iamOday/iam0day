@@ -1,5 +1,5 @@
 import { type PageProps } from "$fresh/server.ts";
-import { ExternalLink } from "@/components/Links.tsx";
+import { Social } from "@/components/Social.tsx";
 /**
  * The `export default function Home(props: PageProps) {` statement is exporting a default function named `Home`. This function takes in a parameter `props` of type `PageProps`. The function is used to render the home page of the website.
  *
@@ -15,71 +15,14 @@ export default function Home(props: PageProps) {
   return (
     <>
       <div
-        className="grid grid-column place-items-center h-screen"
+        className="grid grid-cols-1 gap-1 place-items-center  content-center grid-flow-row auto-rows-max grid- h-screen"
         data-nosnippet
       >
         <div className="text-center">
           <h1 className="font-bold tracking-tight text-white-900 text-4xl md:text-5xl">
             Coming soon...
           </h1>
-          <div className="mt-10 grid grid-flow-row-dense grid-cols-2 grid-rows-2">
-            <ExternalLink
-              aria-label="Mastodon"
-              href="https://mastodon.online/@iam0day"
-              class="rounded-md bg-indigo-600 uppercase m-3 px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Mastodon
-            </ExternalLink>
-            <ExternalLink
-              aria-label="X"
-              href="https://link.iam0.day/x"
-              class="rounded-md bg-white uppercase m-3 px-3.5 py-2.5 text-sm font-bold text-black shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
-            >
-              Twitter/X
-            </ExternalLink>
-            <ExternalLink
-              aria-label="Instagram"
-              href="https://www.instagram.com/iam0day"
-              class="rounded-md bg-purple-500 uppercase m-3 px-3.5 py-2.5 text-sm font-bold text-black shadow-sm hover:bg-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
-            >
-              Instagram
-            </ExternalLink>
-            <ExternalLink
-              aria-label="Telegram"
-              href="https://link.iam0.day/telegram"
-              class="rounded-md bg-blue-600 uppercase m-3 px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-            >
-              Telegram
-            </ExternalLink>
-            <ExternalLink
-              aria-label="WhatsApp"
-              href="https://whatsapp.com/channel/0029Va8wQcF4SpkCjBO4J43S"
-              class="rounded-md bg-green-600 uppercase m-3 px-3.5 py-2.5 text-sm font-bold text-black shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
-            >
-              WhatsApp
-            </ExternalLink>
-            <ExternalLink
-              aria-label="Github"
-              href="https://github.com/iamOday/iam0day"
-              class="rounded-md bg-gray-600 uppercase m-3 px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
-            >
-              Github
-            </ExternalLink>
-            <ExternalLink
-              aria-label="Codeberg"
-              href="https://codeberg.org/iamOday/iam0day"
-              class="rounded-md bg-indigo-600 uppercase m-3 px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Codeberg
-            </ExternalLink>
-            <ExternalLink
-              aria-label="Dribbble"
-              href="https://dribbble.com/iam0day"
-              class="rounded-md bg-pink-600 uppercase m-3 px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
-            >
-              Dribbble
-            </ExternalLink>
-          </div>
+          <Social />
         </div>
       </div>
     </>

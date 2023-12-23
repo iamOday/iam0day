@@ -44,11 +44,13 @@ export function Style(
         rel={props.rel || "preload"}
         as="style"
         href={props.href}
+        fetchPriority={props.fetchPriority || "high"}
         crossOrigin="anonymous"
       />
       <link
         rel="stylesheet"
         href={props.href}
+        fetchPriority={props.fetchPriority || "high"}
         crossOrigin="anonymous"
         {...props}
       />
@@ -77,11 +79,13 @@ export function Script(
         as="script"
         href={props.src}
         integrity={props.integrity}
+        fetchPriority={props.fetchPriority || "high"}
         crossOrigin="anonymous"
       />
       <script
         src={props.src}
         integrity={props.integrity}
+        fetchPriority={props.fetchPriority || "high"}
         crossOrigin="anonymous"
         {...props}
       />

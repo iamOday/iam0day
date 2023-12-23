@@ -5,6 +5,8 @@ import { defineApp } from "$fresh/server.ts";
 import { asset } from "$fresh/runtime.ts";
 
 export default defineApp((_, ctx) => {
+  const { url } = ctx;
+  const deno = url!.origin + asset("/fresh-badge.svg");
   return (
     <html lang="en" class="scroll-smooth">
       <HeadElement url={ctx.url} title="iam0day">
@@ -15,6 +17,25 @@ export default defineApp((_, ctx) => {
           src={$umami.origin + $umami.script}
           data-website-id={$umami.id}
           integrity={$umami.integrity}
+          fetchPriority="low"
+        />
+        <link
+          key={"preconnect" + deno}
+          rel="preconnect"
+          href={deno}
+          crossOrigin="anonymous"
+        />
+        <link
+          key={"dnsprefetch_" + deno}
+          rel="dns-prefetch"
+          href={deno}
+        />
+        <link
+          rel="prefetch"
+          as="image"
+          href={deno}
+          fetchPriority="low"
+          crossOrigin="anonymous"
         />
       </HeadElement>
       <body className="relative bg-black text-white font-mono antialiased text-base tracking-normal whitespace-normal">
@@ -25,12 +46,14 @@ export default defineApp((_, ctx) => {
         >
           <ExternalLink href="https://fresh.deno.dev" class="py-3">
             <img
+              loading="lazy"
+              fetchPriority="low"
               width="197"
               height="37"
-              src={asset("/fresh-badge.svg")}
+              src={deno}
               title="Fresh"
               alt="Deno Fresh"
-              loading="lazy"
+              crossOrigin="anonymous"
             />
           </ExternalLink>
           <p class="py-3 text-xs md:text-base mx-3">

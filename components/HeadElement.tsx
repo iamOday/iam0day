@@ -76,6 +76,12 @@ export function HeadElement(props: HeadProps) {
         name="keywords"
         content={SITE.keywords}
       />
+      {/* Link Element */}
+      <link
+        key={"canonical_" + url!.href}
+        rel="canonical"
+        href={url!.href}
+      />
       {/* Google / Search Engine Tags */}
       <meta key="itempropname" itemProp="name" content={name} />
       <meta
@@ -133,12 +139,6 @@ export function HeadElement(props: HeadProps) {
       />
       {/* Styles */}
       <Style key="styles" src={url!.origin} href={css} />
-      {/* Link Element */}
-      <link
-        key={"canonical_" + url!.href}
-        rel="canonical"
-        href={url!.href}
-      />
       {/* Other Meta */}
       {
         /*<meta

@@ -30,7 +30,6 @@
     "tailwindcss/": "npm:/tailwindcss/",
     "tailwindcss/plugin": "npm:/tailwindcss/plugin.js",
     "$std/": "https://deno.land/std/",
-    "flowbite": "npm:flowbite-react",
     "@/": "./",
     "@@/": "../"
   },
