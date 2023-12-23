@@ -42,7 +42,7 @@ export default defineApp((_, ctx) => {
         <ctx.Component />
         <footer
           className="sticky grid place-items-center text-center py-5"
-          data-nosnippet
+          data-nosnippet="true"
         >
           <ExternalLink href="https://fresh.deno.dev" class="py-3">
             <img

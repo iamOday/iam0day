@@ -16,7 +16,7 @@ export default function Home(props: PageProps) {
     <>
       <div
         className="grid grid-cols-1 gap-1 place-items-center  content-center grid-flow-row auto-rows-max grid- h-screen"
-        data-nosnippet
+        data-nosnippet="true"
       >
         <div className="text-center">
           <h1 className="font-bold tracking-tight text-white-900 text-4xl md:text-5xl">
