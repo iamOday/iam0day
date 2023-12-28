@@ -1,11 +1,19 @@
 import { HeadElement } from "@/components/HeadElement.tsx";
 import { ExternalLink, Script } from "@/components/Links.tsx";
-import { $carbon, $umami } from "@/utils/constants.ts";
+import { $umami } from "@/utils/constants.ts";
 import { defineApp } from "$fresh/server.ts";
 import { asset } from "$fresh/runtime.ts";
+import { screenshot } from "@/utils/screenshot.ts";
 export default defineApp((_, ctx) => {
   const { url } = ctx;
   const deno = url!.origin + asset("/fresh-badge.svg");
+  /*let path = "";
+  if (url!.pathname === "/") {
+    path = "index";
+  } else {
+    path = url!.pathname.replace("/", "");
+  }
+  screenshot(url!.href, path);*/
   return (
     <html lang="en" className="scroll-smooth">
       <HeadElement url={ctx.url} title="iam0day">
@@ -16,13 +24,6 @@ export default defineApp((_, ctx) => {
           src={$umami.origin + $umami.script}
           data-website-id={$umami.id}
           integrity={$umami.integrity}
-          fetchPriority="low"
-        />
-        <Script
-          defer="true"
-          rel="prefetch"
-          href={$carbon.origin}
-          src={$carbon.origin + $carbon.script}
           fetchPriority="low"
         />
         <link
@@ -62,7 +63,6 @@ export default defineApp((_, ctx) => {
               crossOrigin="anonymous"
             />
           </ExternalLink>
-          <div id="wcb" className="carbonbadge wcb-d" />
           <p className="py-3 text-xs md:text-base mx-3">
             This site uses{" "}
             <ExternalLink

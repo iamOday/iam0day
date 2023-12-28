@@ -1,0 +1,22 @@
+{
+  "lock": false,
+  "name": "iam0day",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "dependencies": {
+    "autoprefixer": "latest",
+    "cssnano": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamOday/iam0day.git"
+  },
+  "author": "iam0day",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamOday/iam0day/issues"
+  },
+  "homepage": "https://github.com/iamOday/iam0day#readme"
+}
