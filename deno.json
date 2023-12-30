@@ -1,11 +1,11 @@
 {
   "lock": false,
   "tasks": {
-    "check": "deno fmt && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "test": "deno fmt && deno lint",
     "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
     "manifest": "deno task cli manifest $(pwd)",
-    "start": "deno fmt && deno lint && DEV=true deno run -A --watch=static/,routes/ dev.ts",
-    "build": "deno fmt && deno lint && deno run -A dev.ts build",
+    "start": "deno task test && deno run -A --watch=static/,routes/ dev.ts",
+    "build": "deno task test && deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },

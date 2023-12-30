@@ -3,17 +3,9 @@ import { ExternalLink, Script } from "@/components/Links.tsx";
 import { $umami } from "@/utils/constants.ts";
 import { defineApp } from "$fresh/server.ts";
 import { asset } from "$fresh/runtime.ts";
-import { screenshot } from "@/utils/screenshot.ts";
 export default defineApp((_, ctx) => {
   const { url } = ctx;
   const deno = url!.origin + asset("/fresh-badge.svg");
-  /*let path = "";
-  if (url!.pathname === "/") {
-    path = "index";
-  } else {
-    path = url!.pathname.replace("/", "");
-  }
-  screenshot(url!.href, path);*/
   return (
     <html lang="en" className="scroll-smooth">
       <HeadElement url={ctx.url} title="iam0day">

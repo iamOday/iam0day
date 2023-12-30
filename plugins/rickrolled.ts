@@ -4,5 +4,6 @@ export default {
   name: "rickrolled",
   routes: [
     { path: "/.git", component: RickRolledYoutube },
+    { path: "/*.json", component: RickRolledYoutube },
   ],
 } as Plugin;

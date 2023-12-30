@@ -1,7 +1,6 @@
 import { HeadElement } from "@/components/HeadElement.tsx";
 import { InternalButton } from "@/components/Links.tsx";
 import { UnknownPageProps } from "$fresh/server.ts";
-import { screenshot } from "@/utils/screenshot.ts";
 /**
  * The line `export default function NotFoundPage({ url }: UnknownPageProps) {` is exporting a default function named `NotFoundPage`. This function takes an object as its parameter, which is destructured to extract the `url` property. The `url` property is of type `UnknownPageProps`.
  *
@@ -13,12 +12,6 @@ import { screenshot } from "@/utils/screenshot.ts";
  * @exports
  */
 export default function NotFoundPage({ url }: UnknownPageProps) {
-  screenshot({
-    _href: url!.href,
-    _path: url!.pathname.replace("/", ""),
-    _dir: "static/i/r/",
-    _date: true,
-  });
   return (
     <>
       <HeadElement url={url} description="Page Not Found" />

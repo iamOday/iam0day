@@ -7,6 +7,7 @@ import * as $_500 from "./routes/_500.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $_middleware from "./routes/_middleware.tsx";
+import * as $api_shoot from "./routes/api/shoot.ts";
 import * as $csp from "./routes/csp.tsx";
 import * as $index from "./routes/index.tsx";
 
@@ -19,6 +20,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
     "./routes/_middleware.tsx": $_middleware,
+    "./routes/api/shoot.ts": $api_shoot,
     "./routes/csp.tsx": $csp,
     "./routes/index.tsx": $index,
   },

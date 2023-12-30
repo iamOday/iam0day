@@ -1,7 +1,6 @@
 import { HeadElement } from "@/components/HeadElement.tsx";
 import { InternalButton } from "@/components/Links.tsx";
 import { ErrorPageProps } from "$fresh/server.ts";
-import { screenshot } from "@/utils/screenshot.ts";
 /**
  * Description
  * @function
@@ -12,12 +11,6 @@ import { screenshot } from "@/utils/screenshot.ts";
  * @exports
  */
 export default function Error500Page({ error, url }: ErrorPageProps) {
-  screenshot({
-    _href: url!.href,
-    _path: url!.pathname.replace("/", ""),
-    _dir: "static/i/r/",
-    _date: true,
-  });
   return (
     <>
       <HeadElement url={url} description="Internal Server Error" />

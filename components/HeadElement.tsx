@@ -1,6 +1,5 @@
-import { Head } from "$fresh/runtime.ts";
+import { asset, Head } from "$fresh/runtime.ts";
 import { SITE } from "@/utils/constants.ts";
-import { asset } from "$fresh/runtime.ts";
 import { Style } from "@/components/Links.tsx";
 import { ComponentChildren } from "preact";
 /**
@@ -33,7 +32,7 @@ export function HeadElement(props: HeadProps) {
   const { url, title, description } = props;
   const name = title || SITE.title;
   const text = description || SITE.description;
-  const image = url!.origin + asset("/iam0.day.png");
+  const image = url!.origin + asset("/p/index.webp");
   const css = url!.origin + asset("/styles.css");
   const articleStructuredData = {
     "@context": "https://schema.org",

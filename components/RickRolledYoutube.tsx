@@ -2,15 +2,9 @@ import { HeadElement } from "@/components/HeadElement.tsx";
 import { InternalButton } from "@/components/Links.tsx";
 import { type PageProps } from "$fresh/server.ts";
 import { asset } from "$fresh/runtime.ts";
-import { screenshot } from "@/utils/screenshot.ts";
 export function RickRolledYoutube(props: PageProps) {
   const { url } = props;
   const rickroll = url!.origin + asset("/rickroll.gif");
-  screenshot({
-    _href: url!.href,
-    _path: url!.pathname.replace("/", ""),
-    _dir: "static/i/s/",
-  });
   return (
     <>
       <HeadElement
