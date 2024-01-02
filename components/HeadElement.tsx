@@ -174,7 +174,7 @@ export function HeadElement(props: HeadProps) {
       <meta
         key="Cache-Control"
         httpEquiv="Cache-Control"
-        content="no-store"
+        content="no-cache"
       />
       <meta
         key="Permissions-Policy"

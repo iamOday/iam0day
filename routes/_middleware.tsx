@@ -38,7 +38,7 @@ export async function handler(req: Request, ctx: FreshContext) {
   headers.set("X-Permitted-Cross-Domain-Policies", "none");
   headers.set("Referrer-Policy", "no-referrer");
   headers.set("X-DNS-Prefetch-Control", "off");
-  headers.set("Cache-Control", "no-store");
+  headers.set("Cache-Control", "no-cache");
   headers.set("Cross-Origin-Opener-Policy", "same-origin");
   headers.set("Cross-Origin-Embedder-Policy", "require-corp");
   headers.set("Cross-Origin-Resource-Policy", "same-site");
