@@ -23,5 +23,5 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "iam0.day" # Update the deploy project name if necessary
+          project: "iam0day" # Update the deploy project name if necessary
           entrypoint: "./main.ts" # Update the entrypoint if necessary
